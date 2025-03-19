@@ -1,0 +1,84 @@
+Project Title: SmartNote
+Project Overview:
+SmartNote is a note-taking web app built with FastAPI (leveraging its asynchronous capabilities). It offers RESTful endpoints for CRUD operations on notes, integrates multiple databases (MongoDB for storing notes and an SQL database for user management), uses modern authentication (OAuth2 with JWT), processes images with OpenCV, schedules background tasks, and is built with performance, security, and scalability in mind.
+
+Key Features and Technical Goals
+REST API Development:
+
+Build a complete set of REST endpoints using FastAPI.
+Implement CRUD operations (create, read, update, delete) for notes.
+Framework Proficiency (FastAPI Preferred):
+
+Use FastAPI to develop asynchronous endpoints.
+Leverage built-in documentation (Swagger UI) for API exploration.
+Data Integration:
+
+Integrate MongoDB for note storage.
+Use an SQL database (e.g., PostgreSQL or MySQL) to manage user accounts and authentication data.
+Create database schemas that model the business processes (user profiles, note metadata, etc.).
+Asynchronous & Thread-Based Programming:
+
+Utilize asynchronous programming in API endpoints.
+Offload heavy operations (like image processing) to background threads or asynchronous tasks.
+Background Task Scheduling:
+
+Integrate a task queue like Celery with Celerybeat (or use Linux’s crontab) for scheduling tasks such as:
+Sending periodic email reminders.
+Cleaning up outdated notes.
+Processing uploaded images in the background.
+Image Processing with OpenCV:
+
+Allow users to attach images to their notes.
+Process these images with OpenCV (e.g., basic editing, conversion, or even preliminary OCR).
+Optionally extend features to extract text from images if desired.
+Unit Testing & Code Optimization:
+
+Write unit tests using frameworks like pytest to validate API endpoints and business logic.
+Perform load testing using tools (e.g., Locust or JMeter) to assess and optimize performance.
+Ensure security best practices are followed, including sanitizing inputs and protecting endpoints.
+Modern Authorization & Authentication:
+
+Implement secure user authentication using OAuth2 with JWT tokens.
+Develop user registration, login, and session management functionalities.
+Performance, Security, and Scalability:
+
+Optimize code for high performance.
+Ensure the app is secure by following industry-standard practices.
+Design the architecture to be scalable (e.g., consider Docker for containerization and ease of deployment).
+
+
+Milestones
+Project Setup (Week 1):
+
+Initialize a Git repository and set up your project environment.
+Create a virtual environment and install necessary packages (FastAPI, Uvicorn, Motor for MongoDB, SQLAlchemy for SQL, Celery, OpenCV, etc.).
+User Management & Authentication (Week 2):
+
+Design the SQL database schema for users.
+Develop endpoints for user registration, login, and token generation using OAuth2/JWT.
+Secure the API endpoints to require valid tokens.
+Note CRUD API (Week 2-3):
+
+Design and implement REST endpoints for note creation, retrieval, updating, and deletion.
+Integrate MongoDB to store note data.
+Validate input and handle errors gracefully.
+Background Task & Scheduler Integration (Week 3-4):
+
+Set up Celery and Celerybeat (or configure Linux crontab) to run background tasks.
+Develop tasks such as sending reminder emails and cleaning up old or archived notes.
+Ensure tasks run asynchronously without blocking API responses.
+Image Processing Feature (Week 4):
+
+Add functionality for users to attach images to their notes.
+Use OpenCV to process these images (e.g., resizing, filtering, or extracting text).
+Handle file uploads securely.
+Testing and Optimization (Week 5):
+
+Write comprehensive unit tests using pytest for API endpoints and business logic.
+Conduct load testing to identify performance bottlenecks.
+Optimize code for scalability, security, and performance.
+Documentation & Deployment (Week 6):
+
+Document the API using the built-in FastAPI Swagger UI and additional written guides.
+Prepare deployment scripts (consider Docker for containerization).
+Deploy to a Linux server ensuring all services (API, background workers, schedulers) are properly configured.
